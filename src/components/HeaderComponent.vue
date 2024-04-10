@@ -1,7 +1,13 @@
 <template>
   <header class="container">
-    <img :src="img" alt="DC logo"/>
-    <h2>Header</h2>
+    <nav class="d-flex justify-content-between align-items-center py-3">
+      <img :src="img" alt="DC logo" />
+      <ul class="d-flex">
+        <li v-for="(item, index) in navlist" :key="index">
+          <a href="#">{{ item }}</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -10,7 +16,19 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-        img: "../public/img/dc-logo.png"
+      img: "../public/img/dc-logo.png",
+      navlist: [
+        "Characters",
+        "Comics",
+        "Movies",
+        "TV",
+        "Games",
+        "Collectibles",
+        "Videos",
+        "Fans",
+        "News",
+        "Shop",
+      ],
     };
   },
 };
@@ -20,5 +38,19 @@ export default {
 @use "./src/assets/styles/partials/variables" as *;
 header {
   background-color: $bg-color-header;
+}
+ul {
+  list-style: none;
+  li {
+    margin: 0 15px;
+    a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: $bg-color-footer-top solid 5px;
+      }
+    }
+  }
 }
 </style>
