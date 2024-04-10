@@ -1,12 +1,14 @@
 <template>
   <footer class="mid">
-    <div class="container">
+    <div class="container d-flex">
       <div class="left">
         <ul class="text-light" v-for="(title, index) in titles" :key="index">
-            {{title}}
-            <li v-for="(item, index) in subtitles" :key="index">
-                {{subtitles[index]}}
-            </li>
+          {{
+            title
+          }}
+          <li v-for="(item, index) in subtitles" :key="index">
+            {{ subtitles[index] }}
+          </li>
         </ul>
       </div>
       <div class="right">
@@ -21,12 +23,17 @@ export default {
   name: "FooterMidComponent",
   data() {
     return {
-        titles: [
-            "dc comics","dc", "sites", "shop"
-        ],
-        subtitles:[
-            "Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"
-        ]
+      img: "./public/img/dc-logo-bg.png",
+      titles: ["dc comics", "dc", "sites", "shop"],
+      subtitles: [
+        "Characters",
+        "Comics",
+        "Movies",
+        "TV",
+        "Games",
+        "Videos",
+        "News",
+      ],
     };
   },
 };
@@ -36,15 +43,24 @@ export default {
 .mid {
   background-image: url(./public/img/footer-bg.jpg);
 }
-.right {
-  width: 50%;
-}
 .left {
-  background-image: url(./public/img/dc-logo-bg.png);
-  background-repeat: no-repeat;
+  display: flex;
   width: 50%;
   img {
     width: 100%;
   }
+}
+ul {
+  list-style: none;
+  text-transform: uppercase;
+  li {
+    text-transform: lowercase;
+  }
+}
+.right {
+  width: 50%;
+  background-image: url(./public/img/dc-logo-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>
