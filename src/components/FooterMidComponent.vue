@@ -78,6 +78,8 @@ export default {
 <style lang="scss" scoped>
 .mid {
   background-image: url(./public/img/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .left {
   display: flex;
