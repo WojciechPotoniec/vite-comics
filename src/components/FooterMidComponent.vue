@@ -2,9 +2,10 @@
   <footer class="mid">
     <div class="container">
       <div class="left">
-        <ul>
-            <li>
-                
+        <ul class="text-light" v-for="(title, index) in titles" :key="index">
+            {{title}}
+            <li v-for="(item, index) in subtitles" :key="index">
+                {{subtitles[index]}}
             </li>
         </ul>
       </div>
@@ -19,7 +20,14 @@
 export default {
   name: "FooterMidComponent",
   data() {
-    return {};
+    return {
+        titles: [
+            "dc comics","dc", "sites", "shop"
+        ],
+        subtitles:[
+            "Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"
+        ]
+    };
   },
 };
 </script>
@@ -33,6 +41,7 @@ export default {
 }
 .left {
   background-image: url(./public/img/dc-logo-bg.png);
+  background-repeat: no-repeat;
   width: 50%;
   img {
     width: 100%;
