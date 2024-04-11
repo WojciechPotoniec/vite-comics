@@ -6,8 +6,8 @@ $bg-img-footer-mid: url(../public/img/footer-bg.jpg);
 $bg-color-footer-bottom: #303030;
 
 //* utilities
-// @mixin flex{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+@mixin wp-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
