@@ -76,4 +76,7 @@ ul {
     margin-left: 20px;
   }
 }
+img:hover{
+  opacity: 0.6;
+}
 </style>
