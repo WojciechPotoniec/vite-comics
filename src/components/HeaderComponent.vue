@@ -1,6 +1,6 @@
 <template>
   <header class="container">
-    <nav class="d-flex justify-content-between align-items-center py-3">
+    <nav class="py-3">
       <img :src="img" alt="DC logo" />
       <ul class="d-flex">
         <li v-for="(item, index) in navlist" :key="index">
@@ -38,6 +38,9 @@ export default {
 @use "./src/assets/styles/partials/variables" as *;
 header {
   background-color: $bg-color-header;
+}
+nav {
+  @include wp-flex;
 }
 ul {
   list-style: none;

@@ -55,9 +55,7 @@ img {
 }
 ul {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include wp-flex;
   li {
     margin: 0 20px;
     a {
