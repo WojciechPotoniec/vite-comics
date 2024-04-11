@@ -58,6 +58,12 @@ button{
   padding: 6px;
   background-color: transparent;
   color: white;
+  font-weight: 600;
+  &:hover{
+    color: $bg-color-footer-top;
+    background-color: white;
+    transition: 0.8s;
+  }
 }
 ul {
   list-style: none;
