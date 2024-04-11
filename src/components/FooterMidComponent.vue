@@ -3,9 +3,9 @@
     <div class="container d-flex">
       <div class="left">
         <ul class="text-light" v-for="(mainlist, index) in mainlists" :key="index">
-          <span>
+          <h4>
             {{mainlist.title}}
-          </span>
+          </h4>
           <li v-for="(item, i) in mainlist.list" :key="i">
             <a href="#">{{ item }}</a>
           </li>
@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "./src/assets/styles/partials/variables" as *;
 .mid {
   background-image: url(./public/img/footer-bg.jpg);
   background-repeat: no-repeat;
@@ -88,6 +89,7 @@ export default {
 }
 ul{
   list-style: none;
+  margin-top: 30px;
 }
 span{
   text-transform: uppercase;
@@ -98,7 +100,7 @@ a{
   color: grey;
   font-size: 0.9rem;
   &:hover{
-    color: white;
+    color: $bg-color-footer-top;
   }
 }
 
