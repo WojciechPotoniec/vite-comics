@@ -4,7 +4,7 @@
       <img :src="img" alt="DC logo" />
       <ul class="d-flex">
         <li v-for="(item, index) in navlist" :key="index">
-          <a href="#">{{ item }}</a>
+            <a href="#">{{ item }}</a>
         </li>
       </ul>
     </nav>
@@ -46,14 +46,29 @@ ul {
   list-style: none;
   li {
     margin: 0 15px;
-    a {
-      text-decoration: none;
-      color: black;
-      text-transform: uppercase;
-      &:hover {
-        border-bottom: $bg-color-footer-top solid 5px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+      }
+      a:hover{
+        color: $bg-color-footer-top;
+      }
+      a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 81px;
+        width: 100%;
+        height: 5px;
+        background-color: $bg-color-footer-top;
+        visibility: hidden;
+      }
+      a:hover::after{
+        visibility: visible;
       }
     }
   }
-}
 </style>
