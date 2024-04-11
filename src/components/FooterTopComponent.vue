@@ -61,7 +61,7 @@ ul {
     a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 10px;
       text-transform: uppercase;
     }
   }
