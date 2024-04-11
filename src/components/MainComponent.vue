@@ -7,8 +7,14 @@
 </template>
 
 <script>
+import {comics} from '../data/data.js'
     export default {
         name: 'MainComponent',
+        data(){
+            return{
+                comics: comics
+            }
+        }
     }
 </script>
 
